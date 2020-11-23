@@ -1,0 +1,92 @@
+.note
+  margin-top 4u
+  display flex
+  &-number
+    width 7u
+    height 7u
+    background-color white
+    border 1px solid black
+    border-radius 5u
+    text-align center
+    align-self center
+    +wide()
+        width 10u
+        height 10u
+    &_nmb
+      line-height 7u
+      font-size 20px
+      +wide()
+        line-height 10u
+        font-size 4u
+  &-data
+    margin-left 2u
+    flex 1
+    justify-content center
+  &-title
+    font-weight bold
+    letter-spacing 1px
+    font-size 18px
+    color #333333
+    +wide()
+        font-weight 400
+        font-size 3u
+  &-author
+    color #cf2e22
+    font-weight bold
+    font-size 12px
+    +wide()
+        line-height 4u
+  &-date
+    line-height 12px
+    font-size 12px
+    color #888888
+
+
+.text-holder
+  margin-top 2u
+  max-width 100%
+  +wide()
+    margin-top 5u
+  &__text
+    +wide()
+        font-size 20px
+        line-height 3u
+.actions
+  margin-top 2u
+.action  
+  &-text
+    line-height 4u
+    font-weight bold
+    color #cf2e22
+  &-count
+    color #888888
+  &-btn
+    border none
+    height 4u
+  &-icon
+    color #cf2e22
+  
+.comments
+  margin-top 2u
+  background-color #efefef
+  padding 1u
+  border-bottom 1px solid #cccccc
+  +wide()
+    padding 0 3u 2u 3u
+
+.ava-image
+    position relative
+    width 5u
+    height 5u
+    background-color black
+    border-radius 7u
+
+.data
+    margin-left 1u
+    display flex
+    justify-content center
+    flex 1
+
+.comment
+    +wide()
+        margin-top 2u

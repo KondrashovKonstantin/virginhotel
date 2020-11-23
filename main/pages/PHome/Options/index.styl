@@ -1,0 +1,36 @@
+.options
+  padding 3u 
+  background-color #efefef
+  +tablet()
+    padding 3u 8u
+  +wide()
+    padding 3u 12u
+.option
+  font-size 20px
+  color #cf2e22
+  font-weight bold
+  line-height 5u
+  +desktop()
+    font-size 18px
+    margin-left 4u
+    font-weight 400
+  &-btn
+    border none
+    +tablet()
+      display none
+  &-icon
+    color #cf2e22
+
+.hidden
+  display none
+  +tablet()
+    display inline
+
+.options-dropdown
+  +tablet()
+    display none
+
+.options-row
+  +desktop()
+    margin-left -4u
+    justify-content flex-start

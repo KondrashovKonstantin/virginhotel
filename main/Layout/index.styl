@@ -2,10 +2,10 @@ $menuHeight = 6u
 $logoColor = #FCB69D
 
 .sidebar
-  background-color #eee
-
+  background-color #cf2e22
   &-menu
     padding-top 2u
+    padding-left 2u
 
 .menu
   background-color rgba(black, 0.02)
@@ -16,10 +16,83 @@ $logoColor = #FCB69D
   border-bottom-width 1px
   border-bottom-color rgba(black, 0.05)
 
-.logo
-  margin-left 2u
-  color $UI.colors.secondaryText
-  font(xl)
+
 
 .body
   flex 1
+
+.btn 
+  width 4u
+  border none
+
+.logo-img
+  margin-left 2u
+  width 25u
+  height 12u
+
+
+.item
+  margin-top 3u
+  &-text
+    color white
+    font-weight bold
+.items-holder
+  margin-top 5u
+
+.social
+  display flex
+  flex-direction row
+  margin-left -2u
+  margin-top 5u
+  &-button
+    margin-left 2u
+    width 5u
+    height 5u
+    background-color white
+    border none
+    border-radius 5u
+  &-icon
+    color #cf2e22
+
+.back
+  padding 2u
+  
+.header-logo
+  margin-left 5u
+  width 17u
+  height 8u
+  +desktop()
+    width 25u
+    height 12u
+.main
+  background-color #e6e6e6
+
+.header-item
+  display:none
+  +desktop()
+    display flex
+    align-self flex-end
+    height 4u
+    margin-left 3u
+  +wide()
+    margin-left 4u
+    
+
+.header-text
+  font-size 20px
+  color rgba(255,255,255,0.75)
+  +wide()
+    font-size 24px
+
+.big-header
+  display: none 
+  +desktop()
+    display flex
+    color rgba(255,255,255,0.9)
+    font-size 6u
+    margin-left 5%
+    margin-top 10u
+    letter-spacing 12px
+    font-weight 100
+  
+
