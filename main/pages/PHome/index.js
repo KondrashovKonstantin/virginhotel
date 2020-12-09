@@ -14,7 +14,7 @@ export default observer(function PHome () {
   return pug`
     Div.root
       Navbar
-      Div.content  
+      Div.content
         Suggestion
         Options
         Notes

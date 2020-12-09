@@ -83,8 +83,7 @@ export default observer(function ({ children }) {
                   Span.header-text RESOURCES
                 Div.header-item
                   Span.header-text V &#129293; WELL
-              Div
-                Span.big-header BARE IT!
+              Span.big-header BARE IT!
                 
             Div.body= children
   `

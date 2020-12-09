@@ -4,7 +4,7 @@ import './index.styl'
 import { Div } from '@startupjs/ui'
 import { Note } from '../../../../components'
 
-const notes =[
+const notes = [
     {
         title: 'CLASSES', 
         author:'Rebeca La Malfa', 

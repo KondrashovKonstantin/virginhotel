@@ -5,7 +5,8 @@ import './index.styl'
 import { faHeart, faMap, faCommentAlt } from '@fortawesome/free-regular-svg-icons'
 import { Div, Icon, Span, Row, Divider } from '@startupjs/ui'
 import text from '../../../../public/make-love-text.svg'
-import { Event } from '../../../../components'
+import HotelEvents from './HotelEvents'
+import TeamEvents from './TeamEvents'
 
 const event1 = [
     {
@@ -65,23 +66,12 @@ export default observer(function Navbar () {
             Span.title(styleName='red big-text') EVENTS
             Divider(style={width:'60px'})
             Div.events-holder
-                for item in event1
-                    Event(
-                        title=item.title, 
-                        startDate=item.startDate
-                        finishDate=item.finishDate
-                        location=item.location)
+                TeamEvents(events=event1)
         Div.section(styleName='second')
             Span.title(styleName='red small-text') HOTEL
             Span.title(styleName='red big-text') EVENTS
             Divider(style={width:'60px'})
             Div.events-holder
-                for item in event2
-                    Event(
-                        withImage
-                        title=item.title, 
-                        startDate=item.startDate
-                        image=item.image
-                        location=item.location)
+                HotelEvents(events=event2)
   ` 
 })
