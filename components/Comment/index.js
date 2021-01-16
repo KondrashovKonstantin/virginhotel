@@ -7,7 +7,7 @@ import { faTimesCircle } from '@fortawesome/free-regular-svg-icons'
 
 export default observer(function Note({avaUri, author, date, text}) {
     return pug`
-        Div.comment
+        Div.root
             Row
                 Div.ava
                     Image.ava-image(source={uri:avaUri})

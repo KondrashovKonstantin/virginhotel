@@ -65,7 +65,7 @@ export default observer(function ({ children }) {
         ScrollView.main
           ImageBackground.back(source={uri:back} imageStyle={height:'820px'})
             Div.header
-              Row(vAlign='center')
+              Row(vAlign='center' align='between')
                 if !opened
                   Button.btn(color='white' size='xl' icon=faBars onPress=() => $opened.set(!opened))
                 Image.header-logo(source={uri:logo})

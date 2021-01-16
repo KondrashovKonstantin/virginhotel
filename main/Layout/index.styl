@@ -42,7 +42,6 @@ $logoColor = #FCB69D
 .social
   display flex
   flex-direction row
-  margin-left -2u
   margin-top 5u
   &-button
     margin-left 2u
@@ -54,11 +53,12 @@ $logoColor = #FCB69D
   &-icon
     color #cf2e22
 
-.back
-  padding 2u
-  
+.header
+  padding 4u
+  +wide()
+    padding 4u 12u
+
 .header-logo
-  margin-left 5u
   width 17u
   height 8u
   +desktop()
@@ -71,15 +71,9 @@ $logoColor = #FCB69D
   display:none
   +desktop()
     display flex
-    align-self flex-end
-    height 4u
-    margin-left 3u
-  +wide()
-    margin-left 4u
-    
 
 .header-text
-  font-size 20px
+  font-size 14px
   color rgba(255,255,255,0.75)
   +wide()
     font-size 24px
@@ -89,10 +83,15 @@ $logoColor = #FCB69D
   +desktop()
     display flex
     color rgba(255,255,255,0.9)
-    font-size 6u
-    margin-left 5%
+    font-size 4u
     margin-top 10u
     letter-spacing 12px
     font-weight 100
-  
+    +wide()
+      font-size 6u
+    
+.first
+  margin-left 0
 
+
+  

@@ -8,7 +8,8 @@ import { Event } from '../../../../../components'
 export default observer(function TeamEvents ({events}) {
   return pug`
     Div.root
-        for item in events
+        for item, i in events
+          Div.event(styleName=i===0?'first':null)
             Event(
                 title=item.title, 
                 startDate=item.startDate

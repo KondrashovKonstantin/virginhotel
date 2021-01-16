@@ -7,7 +7,8 @@ import { Event } from '../../../../../components'
 export default observer(function HotelEvents ({events}) {
   return pug`
     Div.root
-        for item in events
+        for item,i in events
+          Div.event(styleName=i===0?'first':null)
             Event(
                 withImage
                 title=item.title, 
