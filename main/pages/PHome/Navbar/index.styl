@@ -1,49 +1,45 @@
-.navbar
-  display flex
-  background-color #dddddd
+_darkRed = #cf2e22
 
-.white
-  background-color white
-
-.grey
-  background-color #efefef
-  
 .section
   align-items center
   padding 3u 2u
+  background-color #dddddd
+  &.white
+    background-color white
+  &.grey
+    background-color #efefef
 
 .makelove
   width 28u
   height 6u
 
 .red
-  color #cf2e22
+  color _darkRed
   font-weight bold
 
 .icons
   width 100%
 
-.icon-wrapper
-  display flex
+.iconWrapper
   align-items center
 
-.icon-text
+.iconText
   margin-top 1u
   text-align center
-  color #cf2e22
+  color _darkRed
 
 .icon
-  color #cf2e22
+  color _darkRed
 
 .title
   font-weight 400
   letter-spacing 3px
 
-.big-text
+.big
   line-height 4u
   font-size 3u
 
-.events-holder
+.eventsHolder
   width 90%
   +tablet()
     width 60%

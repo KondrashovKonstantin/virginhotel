@@ -4,16 +4,16 @@ import './index.styl'
 import { Div } from '@startupjs/ui'
 import { Event } from '../../../../../components'
 
-export default observer(function HotelEvents ({events}) {
+export default observer(function HotelEvents ({ events }) {
   return pug`
     Div.root
-        for item,i in events
-          Div.event(styleName=i===0?'first':null)
-            Event(
-                withImage
-                title=item.title, 
-                startDate=item.startDate
-                image=item.image
-                location=item.location)
-  ` 
+      for item,i in events
+        Div.event(styleName=i===0?'first':null)
+          Event(
+            withImage
+            title=item.title, 
+            startDate=item.startDate
+            image=item.image
+            location=item.location)
+`
 })

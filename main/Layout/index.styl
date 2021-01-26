@@ -3,9 +3,10 @@ $logoColor = #FCB69D
 
 .sidebar
   background-color #cf2e22
-  &-menu
-    padding-top 2u
-    padding-left 2u
+
+.sidebarMenu
+  padding-top 2u
+  padding-left 2u
 
 .menu
   background-color rgba(black, 0.02)
@@ -16,8 +17,6 @@ $logoColor = #FCB69D
   border-bottom-width 1px
   border-bottom-color rgba(black, 0.05)
 
-
-
 .body
   flex 1
 
@@ -25,60 +24,68 @@ $logoColor = #FCB69D
   width 4u
   border none
 
-.logo-img
+.logoImg
   margin-left 2u
   width 25u
   height 12u
 
-
 .item
   margin-top 3u
-  &-text
-    color white
-    font-weight bold
-.items-holder
+
+.itemText
+  color white
+  font-weight bold
+
+.itemsHolder
   margin-top 5u
 
 .social
-  display flex
   flex-direction row
   margin-top 5u
-  &-button
-    margin-left 2u
-    width 5u
-    height 5u
-    background-color white
-    border none
-    border-radius 5u
-  &-icon
-    color #cf2e22
+
+.socialButton
+  margin-left 2u
+  width 5u
+  height 5u
+  background-color white
+  border none
+  border-radius 5u
+  &.first
+    margin-left 0
+    
+.socialIcon
+  color #cf2e22
 
 .header
   padding 4u
+  width 100%
+  max-width 160u
+  align-self center
   +wide()
     padding 4u 12u
 
-.header-logo
+.headerLogo
   width 17u
   height 8u
   +desktop()
     width 25u
     height 12u
+
 .main
   background-color #e6e6e6
 
-.header-item
+.headerItem
   display:none
   +desktop()
     display flex
 
-.header-text
-  font-size 14px
+.headerText
+  font-size 1.5u
   color rgba(255,255,255,0.75)
   +wide()
-    font-size 24px
+    font-size 2u
 
-.big-header
+.bigHeader
   display: none 
   +desktop()
     display flex

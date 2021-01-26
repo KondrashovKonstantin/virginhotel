@@ -5,6 +5,7 @@
     padding 3u 8u
   +wide()
     padding 3u 12u
+
 .option
   font-size 20px
   color #cf2e22
@@ -14,25 +15,27 @@
     font-size 18px
     margin-left 4u
     font-weight 400
-  &-btn
-    border none
+
+.option
+  &.first
+    margin: 0
+  &.hidden
+    display none
     +tablet()
-      display none
-  &-icon
-    color #cf2e22
+      display inline
 
-.hidden
-  display none
-  +tablet()
-    display inline
-
-.options-dropdown
+.optionBtn
+  border none
   +tablet()
     display none
 
-.options-row
+.optionIcon
+  color #cf2e22
+
+.optionsDropdown
+  +tablet()
+    display none
+
+.optionsRow
   +desktop()
     justify-content flex-start
-
-.first
-  margin: 0

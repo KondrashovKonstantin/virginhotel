@@ -1,4 +1,4 @@
-.suggestion
+.root
   background-color #f7f7f7
   padding 2u
   +desktop()
@@ -7,25 +7,50 @@
     padding 10u
 
 .title
-  color #cf2e22
   font-size 20px
   line-height 3u
   letter-spacing 3px 
   text-align center
+  &.red
+    color #cf2e22
+    font-weight bold
+
+.title
+  &.small
+    display none
+    +desktop()
+      text-align left
+      display block
+      font-weight 400
+      font-size 10px
+    +wide()
+      font-size 2u
+
+.title
+  &.big
+    +desktop()
+      font-size 3u
+      text-align left
+      font-weight 400
+      line-height 4u
+    +wide()
+      font-size 4u
+      line-height 6u
+
+.holder
+  margin-top 2u
 
 .input
   margin-top 2u
 
-.simple-text
-  margin-top 2u
-  &_text
-    color #888888
-    line-height 3u
-.red
-  color #cf2e22
-  font-weight bold
+.txt
+  color #888888
+  line-height 3u
+  &.red
+    color #cf2e22
+    font-weight bold
 
-.post-btn
+.postBtn
   margin-top 2u
   border-color black
   border-radius 0
@@ -33,30 +58,10 @@
     margin-top 0
     width 20u
 
-.btn-holder
+.btnHolder
     margin-top 2u
-    display flex
     flex-direction column
     +tablet()
         flex-direction row
         justify-content space-between
         align-items center
-
-.small-title
-    display none
-    +desktop()
-        text-align left
-        display block
-        font-weight 400
-        font-size 10px
-    +wide()
-        font-size 2u
-.big-title
-    +desktop()
-        font-size 3u
-        text-align left
-        font-weight 400
-        line-height 4u
-    +wide()
-        font-size 4u
-        line-height 6u
