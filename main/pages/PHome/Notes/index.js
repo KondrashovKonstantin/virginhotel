@@ -2,7 +2,7 @@ import React from 'react'
 import { observer } from 'startupjs'
 import './index.styl'
 import { Div } from '@startupjs/ui'
-import { Note } from '../../../../components'
+import { Note } from 'components'
 
 const notes = [
   {
