@@ -15,7 +15,7 @@ export default observer(function Note ({ avaUri, author, date, text }) {
           Span.author= author
           Span.date= date
         Div.action
-          Button(icon=faTimesCircle iconStyleName='timesIcon' style={border:'none'})
+          Button.circle(icon=faTimesCircle iconStyleName='timesIcon')
       Span.commentText= text   
       Divider.divider
   `

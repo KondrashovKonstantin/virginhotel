@@ -37,11 +37,17 @@ export default observer(function ({ children }) {
           Image.logoImg(source={uri:logo})
         Div.itemsHolder
           each item in items
-            Div.item
+            Div.item(key = item)
               Span.itemText= item
         Div.social
           each item,i in socials
-            Button.socialButton(icon=item iconStyleName='socialIcon' styleName={first:!i} size='xl')
+            Button.socialButton(
+              icon=item 
+              iconStyleName='socialIcon' 
+              styleName={first:!i} 
+              size='xl'
+              key=i  
+            )
     `
   }
 
@@ -60,7 +66,7 @@ export default observer(function ({ children }) {
                   Button.btn(color='white' size='xl' icon=faBars onPress=() => $opened.set(!opened))
                 Image.headerLogo(source={uri:logo})
                 each item in items
-                  Div.headerItem
+                  Div.headerItem(key=item)
                     Span.headerText= item
               Span.bigHeader BARE IT!
             Div.body= children

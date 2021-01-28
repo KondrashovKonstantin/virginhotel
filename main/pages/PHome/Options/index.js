@@ -12,7 +12,7 @@ export default observer(function Options () {
     Div.root
       Row.optionsRow(align='between' vAlign='center')
         each item,i in optionsList
-          Span.option(styleName={first:!i,hidden:i})= item
+          Span.option(styleName={first:!i,hidden:i} key = i)= item
         Button.optionBtn(
           icon=options?faChevronLeft:faChevronDown 
           iconStyleName='option-icon' size='l' 
@@ -22,6 +22,6 @@ export default observer(function Options () {
         Div.optionsDropdown
           each item,i in optionsList 
             if i
-              Span.option= item       
+              Span.option(key = i)= item       
   `
 })

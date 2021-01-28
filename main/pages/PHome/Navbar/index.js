@@ -43,6 +43,12 @@ const event2 = [
   }
 ]
 
+const iconsText = [
+  { icon: faHeart, text: 'BOOK\nOF LOVE' },
+  { icon: faMap, text: 'CULTURE\nMAP' },
+  { icon: faCommentAlt, text: 'SEND\nFEEDBACK' }
+]
+
 export default observer(function Navbar () {
   return pug`
     Div.root
@@ -51,15 +57,10 @@ export default observer(function Navbar () {
         Span.text(styleName='red') #MLSH
       Div.section(styleName='grey')
         Row.icons(align='around')
-          Div.iconWrapper
-            Icon.icon(icon=faHeart size=35)
-            Span.iconText BOOK #{'\n'}OF LOVE
-          Div.iconWrapper
-            Icon.icon(icon=faMap size=35)
-            Span.iconText CULTURE #{'\n'}MAP
-          Div.iconWrapper
-            Icon.icon(icon=faCommentAlt size=35)
-            Span.iconText SEND #{'\n'}FEEDBACK
+          each item, i in iconsText
+            Div.iconWrapper(key=i)
+              Icon.icon(icon=item.icon size=35)
+              Span.iconText= item.text
       Div.section
         Span.title(styleName='red small') TEAMMATE
         Span.title(styleName='red big') EVENTS

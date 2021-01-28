@@ -55,7 +55,8 @@ export default observer(function Notes () {
           number=item.number, 
           comments=item.comments, 
           text=item.text
-          votes=item.votes)
+          votes=item.votes
+        )
     
   `
 })
