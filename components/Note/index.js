@@ -33,8 +33,14 @@ export default observer(function Note ({ title, number, author, date, text, vote
               Button.actionBtn(icon=faCheckCircle iconStyleName='actionIcon' size='l')
               Span.actionText  MANAGE
       Div.comments
-        for i in comments
-          Comment(avaUri=i.avaUri, author=i.author, date=i.date, text=i.text)         
+        each item, index in comments
+          Comment(
+            avaUri=item.avaUri
+            author=item.author
+            date=item.date
+            text=item.text
+            key=index  
+          )         
         Div.comment
           Row
             Div.ava

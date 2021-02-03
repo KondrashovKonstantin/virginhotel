@@ -4,7 +4,7 @@ import { observer } from 'startupjs'
 import './index.styl'
 import { Div, Span, Row, Divider } from '@startupjs/ui'
 
-export default observer(function Event ({ startDate = new Date(), finishDate = new Date(), title, location, withImage = false, image }) {
+export default observer(function Event ({ startDate = new Date(), finishDate = new Date(), title, location, image }) {
   let formatTime = (date) => {
     let hours = date.getHours()
     let minutes = date.getMinutes()
@@ -45,14 +45,14 @@ export default observer(function Event ({ startDate = new Date(), finishDate = n
       default: return 'DEC'
     }
   }
-  console.log(image)
+
   return pug`
-    if withImage
+    if image
       Row.event
-        Div.imageWrapp
+        Div
           Image.eventImage(source={uri:image})
         Div.info
-          Span(styleName='red')= title
+          Span.red= title
           Span= location
           Span= startDate.toLocaleDateString('en-US',{ month: 'long', year: 'numeric', day: 'numeric', hour:'2-digit', minute:'2-digit' })
     else

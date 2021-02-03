@@ -33,13 +33,14 @@ export default observer(function ({ children }) {
             icon=faArrowLeft 
             onPress=() => $opened.set(!opened) 
             color='white'
-            size='xl')
+            size='xl'
+          )
           Image.logoImg(source={uri:logo})
         Div.itemsHolder
           each item in items
             Div.item(key = item)
               Span.itemText= item
-        Div.social
+        Row.social
           each item,i in socials
             Button.socialButton(
               icon=item 

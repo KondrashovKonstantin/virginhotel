@@ -7,10 +7,12 @@ import { Event } from 'components'
 export default observer(function HotelEvents ({ events }) {
   return pug`
     Div.root
-      for item,i in events
-        Div.event(styleName={first:!i})
+      each item,i in events
+        Div.event(
+          styleName={first:!i}
+          key=i  
+        )
           Event(
-            withImage
             title=item.title, 
             startDate=item.startDate
             image=item.image

@@ -47,7 +47,7 @@ const notes = [
 export default observer(function Notes () {
   return pug`
     Div.root
-      for item in notes
+      each item, i in notes
         Note(
           title=item.title, 
           author=item.author, 
@@ -56,6 +56,7 @@ export default observer(function Notes () {
           comments=item.comments, 
           text=item.text
           votes=item.votes
+          key=i
         )
     
   `

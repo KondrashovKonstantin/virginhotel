@@ -5,7 +5,7 @@ import './index.styl'
 import { Div, Span, Row, Divider, Button } from '@startupjs/ui'
 import { faTimesCircle } from '@fortawesome/free-regular-svg-icons'
 
-export default observer(function Note ({ avaUri, author, date, text }) {
+export default observer(function Comment ({ avaUri, author, date, text }) {
   return pug`
     Div.root
       Row

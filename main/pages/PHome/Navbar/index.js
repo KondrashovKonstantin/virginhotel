@@ -64,13 +64,13 @@ export default observer(function Navbar () {
       Div.section
         Span.title(styleName='red small') TEAMMATE
         Span.title(styleName='red big') EVENTS
-        Divider(style={width:'60px'})
+        Divider.divider
         Div.eventsHolder
           TeamEvents(events=event1)
       Div.section(styleName='second')
         Span.title(styleName='red small') HOTEL
         Span.title(styleName='red big') EVENTS
-        Divider(style={width:'60px'})
+        Divider.divider
         Div.eventsHolder
           HotelEvents(events=event2)
   `

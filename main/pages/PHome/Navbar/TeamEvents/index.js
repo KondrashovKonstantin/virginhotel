@@ -7,8 +7,11 @@ import { Event } from 'components'
 export default observer(function TeamEvents ({ events }) {
   return pug`
     Div.root
-      for item, i in events
-        Div.event(styleName=i==={first:!i})
+      each item, i in events
+        Div.event(
+          styleName=i==={first:!i}
+          key=i
+        )
           Event(
             title=item.title, 
             startDate=item.startDate

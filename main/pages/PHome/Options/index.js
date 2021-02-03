@@ -7,7 +7,7 @@ import { faChevronDown, faChevronLeft } from '@fortawesome/free-solid-svg-icons'
 const optionsList = ['ALL', 'MOST LOVED', 'IN ACTION', 'ARCHIVE']
 
 export default observer(function Options () {
-  const [options, toggleOptions] = useState(false)
+  const [options, setOptions] = useState(false)
   return pug`
     Div.root
       Row.optionsRow(align='between' vAlign='center')
@@ -16,7 +16,7 @@ export default observer(function Options () {
         Button.optionBtn(
           icon=options?faChevronLeft:faChevronDown 
           iconStyleName='option-icon' size='l' 
-          onPress= ()=>toggleOptions(!options)
+          onPress= ()=>setOptions(!options)
         )
       if options
         Div.optionsDropdown
