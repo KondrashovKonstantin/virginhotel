@@ -34,6 +34,7 @@ export default observer(function ({ children }) {
             onPress=() => $opened.set(!opened) 
             color='white'
             size='xl'
+            variant='text'
           )
           Image.logoImg(source={uri:logo})
         Div.itemsHolder
@@ -60,7 +61,7 @@ export default observer(function ({ children }) {
         width=320
       )
         ScrollView.main
-          ImageBackground.back(source={uri:back} imageStyle={height:'820px'})
+          ImageBackground.back(source={uri:back} imageStyleName='backImage')
             Div.header
               Row(vAlign='center' align='between')
                 if !opened
