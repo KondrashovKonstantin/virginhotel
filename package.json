@@ -23,6 +23,8 @@
     "fonts": "startupjs fonts"
   },
   "dependencies": {
+    "@fortawesome/free-brands-svg-icons": "^5.15.1",
+    "@fortawesome/free-regular-svg-icons": "^5.15.1",
     "@fortawesome/free-solid-svg-icons": "^5.12.0",
     "@startupjs/ui": "^0.28.0",
     "axios": "^0.21.0",
